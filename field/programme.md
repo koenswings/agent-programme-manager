@@ -17,7 +17,7 @@ _Version 2.1 — March 2026_
 
 **Communication:** All field communication happens in the WhatsApp group **"IDEA: the local team for the Initiative for Digital Education in Africa"**. Koen and Justice follow all field activity from Belgium in this group.
 
-**How escalations work:** Tapiwa resolves technical issues on-site (he is the technical lead with full system knowledge). Issues he cannot fix → Koen provides remote technical support. Teaching or school-relationship issues → Justice follows up with the school contact. Formal or strategic decisions → Koen. Each site has a school contact person known to Misheck and Justice.
+**How escalations work:** Tapiwa resolves technical issues on-site (he is the technical lead with full system knowledge). Issues he cannot fix → Koen provides remote technical support. Teaching or school-relationship issues → Misheck contacts the school contact directly on the ground (he knows the people and the context). If the issue needs teaching methodology input, Misheck consults Justice. Formal or strategic decisions → Koen. Each site has a school contact person known to Misheck.
 
 **Payment:** $70/week to Misheck and Tapiwa (covering fuel and time), released on receipt of the weekly field report.
 
@@ -47,17 +47,29 @@ By the end of the first 6-week cycle, we expect:
 IDEA provides the equipment and ongoing support at no cost to the schools. In return, schools are expected to use the system. Use means: teachers access it, students benefit from it.
 
 **What we track:**
-- Usage data visible in the Kolibri admin panel (number of student sessions)
-- Teacher engagement during training visits (are teachers present, trying things, completing tasks?)
+
+_Kolibri (Tapiwa checks Reports each visit):_
+- Number of student sessions since last visit
+- Lesson completion per student (from Week 3)
+- Quiz scores per student (from Week 4)
+- Which resources students have accessed
+
+_Nextcloud (Misheck checks Activity log each visit):_
+- Teacher logins since last visit
+- Whether students have opened the shared class folder
+- Files uploaded to Drop Zone (student homework, from Week 4)
+
+_Observation:_
+- Teacher engagement during training visits (present, attempting tasks, completing them)
 - School contact responsiveness between visits
 
 **Consequences of non-use:**
 
 | Situation | Action |
 |-----------|--------|
-| Zero student Kolibri activity for 2 consecutive weeks (after teacher training has been done) | Justice contacts the school contact directly; asks what the obstacle is |
-| No improvement after 2 more weeks | Justice and Koen write formally to the school leadership |
-| No improvement after a further 2 weeks | Koen and Justice assess whether to withdraw equipment and reallocate to a willing site |
+| Zero student Kolibri activity for 2 consecutive weeks (after teacher training has been done) | Misheck contacts the school contact directly; asks what the obstacle is |
+| No improvement after 2 more weeks | Misheck and Koen write formally to the school leadership |
+| No improvement after a further 2 weeks | Koen assesses whether to withdraw equipment and reallocate to a willing site |
 
 This is not punitive — the equipment should go where it is used. IDEA will always discuss honestly with the school before taking action.
 
@@ -74,9 +86,10 @@ Verify before anything else:
 If broken: **Tapiwa diagnoses and resolves it** — he has full knowledge of the system. If he cannot fix it on-site, Misheck posts a photo and description in the WhatsApp group. Koen provides remote technical support.
 
 ### Step 2 — Usage Review (10 min)
-**Misheck** checks the Kolibri admin panel: how many student sessions since last visit? Takes a photo.
+**Misheck** opens the Nextcloud Activity log (admin panel → Activity): any teacher or student logins since last visit? Notes the activity or takes a screenshot.
+**Tapiwa** opens the Kolibri Reports panel: how many sessions since last visit? From Week 3 onwards: check lesson completion per student and quiz scores if a quiz was assigned. Takes a photo.
 **Tapiwa** asks the teacher: "Did you or students use it this week? Any problems?"
-If usage is zero for a second week running: flag in report — Justice will follow up with the school contact.
+If usage is zero for a second week running: flag in report — Misheck contacts the school contact directly.
 
 ### Step 3 — Training Session (20–40 min)
 **Tapiwa** leads the training, following the topic for this week (see curriculum below).
@@ -102,8 +115,10 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 
 ### Week 1 — System Orientation + User Setup
 
-**Kolibri:**
+**Kolibri (Presentation: "Setting Up Classes in Kolibri"):**
 - Teacher login and navigation: finding channels, browsing by subject and grade
+- Teacher creates a class in Kolibri and enrolls the student accounts
+- Teacher browses a loaded channel and builds their first lesson by selecting 2–3 resources
 
 **Nextcloud — Admin Setup (Presentation: "Registering Users and Organizing Classes"):**
 - Access the Accounts dashboard
@@ -117,15 +132,16 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 
 **Students:** No student session this week — teacher and admin focus only.
 
-**Expected outcome:** Teacher has logged into Kolibri. At least one class group exists in Nextcloud. At least 2–3 student accounts created.
+**Expected outcome:** Teacher has logged into Kolibri. A class exists in Kolibri with students enrolled and a first lesson built. At least one class group exists in Nextcloud. At least 2–3 student accounts created.
 
 ---
 
 ### Week 2 — Content Assignment + File Sharing
 
-**Kolibri:**
-- Assign a lesson or channel to a class
-- Show the teacher how to see what they assigned
+**Kolibri (Presentation: "Lessons, Quizzes and Progress in Kolibri"):**
+- Teacher builds a complete lesson: selects resources (videos, exercises) from a loaded channel, orders them, assigns the lesson to the class
+- Teacher previews the lesson to see what students will see
+- Show the teacher the Reports panel: what they will be able to track once students start
 
 **Nextcloud — Distributing Materials (from "Managing Your Digital Classroom with Nextcloud"):**
 - Upload a document or PDF to a folder
@@ -138,7 +154,7 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 
 **Students:** No student session yet — teacher preparation focus.
 
-**Expected outcome:** Teacher has assigned at least one Kolibri channel. Teacher has shared a folder with a class in Nextcloud.
+**Expected outcome:** Teacher has built and assigned a lesson in Kolibri. Teacher has shared a folder with a class in Nextcloud.
 
 ---
 
@@ -148,6 +164,7 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 - Students log in (using accounts created by teacher)
 - Students find and open their assigned lesson
 - Teacher watches, Tapiwa supports, Misheck observes
+- After the session: Tapiwa shows the teacher how to open Reports → Class → view which students have started or completed resources
 
 **Nextcloud:**
 - Students log in to Nextcloud on their devices
@@ -167,7 +184,9 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 ### Week 4 — Live Classroom Use
 
 **Kolibri:**
-- Teacher runs a proper in-class Kolibri session — full lesson
+- Teacher runs a proper in-class Kolibri session — students work through the assigned lesson
+- Teacher creates a quiz using questions from a loaded channel and assigns it to the class
+- Students complete the quiz; teacher and Tapiwa review aggregate scores in Reports
 - Tapiwa supports; Misheck observes and takes notes for the report
 
 **Nextcloud — Homework Collection (from "Managing Your Digital Classroom with Nextcloud"):**
@@ -182,15 +201,16 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 
 **Students:** Full student session — Kolibri lesson + Nextcloud file drop task.
 
-**Expected outcome:** At least one homework collection via Nextcloud Drop Zone completed. Teacher has used Talk with students.
+**Expected outcome:** At least one homework collection via Nextcloud Drop Zone completed. Teacher has used Talk with students. Teacher has created and assigned a Kolibri quiz; at least one student has completed it.
 
 ---
 
 ### Week 5 — Progress Tracking + Collaboration
 
 **Kolibri:**
-- Teacher reviews student progress: who completed what, who is behind
-- Discuss with teacher: what will you do with this information?
+- Teacher opens Reports → Classes → [Class name]: reviews per-student lesson completion, resources accessed, time spent, and quiz scores
+- Identify 2–3 students who are behind; discuss with teacher: what will you do about it?
+- Discuss: which resources did students engage with most? What does this tell you about what to use next cycle?
 
 **Nextcloud — Collaborative Documents (from "Managing Your Digital Classroom with Nextcloud"):**
 - Teacher creates a new shared document from a template
@@ -248,11 +268,12 @@ Repeat the 6-week cycle, going deeper:
 - Shared in the WhatsApp group so the full team sees the picture
 - Justice proposes any curriculum adjustments for the following cycle; Koen approves
 
-### Escalations (led by Justice)
-- Justice picks up escalations flagged in the field report
-- Justice contacts the school contact person directly via WhatsApp — he understands the culture and language
-- Justice loops in Koen for anything requiring a technical fix or formal decision
-- Note: for Umhambi Orphanage, Misheck as head of the institution takes a direct role in any escalation there
+### Escalations (led by Misheck on the ground)
+- Misheck picks up escalations flagged in the field report — he contacts the school contact directly (he knows the people and the context)
+- Teaching methodology questions → Misheck consults Justice via WhatsApp
+- Technical issues → Misheck reports to Koen; Koen provides remote support
+- Formal or strategic decisions → Koen
+- Note: for Umhambi Orphanage, Misheck is the head of the institution and handles all escalations there directly
 
 ---
 
@@ -274,16 +295,58 @@ Stored in `presentations/`. Tapiwa uses these to prepare and deliver sessions.
 
 | Folder | Used in | Purpose |
 |--------|---------|---------|
-| `presentations/nextcloud-user-registration/` | Week 1 | Admin: create class groups, register students, mobile setup |
-| `presentations/nextcloud-classroom-use/` | Weeks 2–5 | Classroom use: sharing materials, file drop, collaborative docs, Talk |
+| `presentations/nextcloud-user-registration/` | Week 1 | Nextcloud admin: create class groups, register students, mobile setup |
+| `presentations/nextcloud-classroom-use/` | Weeks 2–5 | Nextcloud classroom: sharing materials, file drop, collaborative docs, Talk |
+| `presentations/kolibri-classroom-setup/` | Week 1 | Kolibri: create a class, enroll students, build a first lesson from loaded resources |
+| `presentations/kolibri-lessons-and-quizzes/` | Weeks 2–5 | Kolibri: build and assign lessons, create quizzes, read the Reports dashboard |
 
 PDFs can be printed or viewed offline on the IDEA system. Justice reviews these materials and may update them between cycles based on field feedback.
 
 ---
 
+## Usage Tracking
+
+### Kolibri
+
+Tapiwa checks the Reports panel at every visit (from Week 3 onwards, per-student detail becomes meaningful).
+
+**Where:** Kolibri → Reports → Classes → [Class name]
+
+| Metric | What to look for | Available from |
+|--------|-----------------|----------------|
+| Sessions since last visit | Overall activity level | Week 1 |
+| Lesson completion per student | Who has started / finished assigned content | Week 3 |
+| Resource access (videos watched, exercises done) | Depth of engagement | Week 3 |
+| Quiz scores per student | Understanding level; who needs extra support | Week 4 |
+
+Misheck records the headline numbers in the field report. Tapiwa notes any students significantly behind. If a student has zero activity for two weeks after the student sessions began, flag it — Misheck follows up with the teacher.
+
+> Note: the available data depends on which channels are loaded on the app disk. If a channel only contains videos (no exercises), quiz creation will not be possible from that channel. Tapiwa to confirm which channels support exercises.
+
+---
+
+### Nextcloud
+
+Misheck checks the Activity log at every visit.
+
+**Where:** Nextcloud → top-right menu → Activity (or admin panel → Activity)
+
+| Metric | What to look for | Available from |
+|--------|-----------------|----------------|
+| Teacher logins | Is the teacher accessing the system between visits? | Week 1 |
+| Student logins and file views | Are students opening the shared class folder? | Week 2 |
+| File uploads to Drop Zone | Student homework submission evidence | Week 4 |
+| Shared folder activity | Which class groups are actively using shared content? | Week 2 |
+
+> Note: Nextcloud activity logging requires the Activity app to be enabled. Tapiwa to confirm this is active on first visit. If it is not enabled, Koen to activate remotely.
+
+---
+
 ## Open Questions for Koen and Justice
 
-- [ ] Confirm which Kolibri channels are loaded at each site (affects Week 2–3 content — Tapiwa likely knows; Koen to confirm)
+- [ ] Confirm which Kolibri channels are loaded at each site — and whether they include exercises (needed for quiz creation in Week 4). Tapiwa likely knows; Koen to confirm.
 - [ ] Confirm Nextcloud admin credentials are with Tapiwa (he is technical lead — needed for Week 1)
 - [ ] Confirm whether Nextcloud Talk is enabled and configured on the system (Tapiwa + Koen)
-- [ ] Justice to brief Tapiwa on the teaching curriculum and share the presentations before the first visit
+- [ ] Confirm whether the Nextcloud Activity app is enabled (needed for usage tracking from Week 1)
+- [ ] Justice to brief Tapiwa on the teaching curriculum and share all four presentations before the first visit
+- [ ] Confirm Kolibri Reports is accessible to the teacher account (not just the admin account) — affects how Tapiwa can demonstrate progress tracking in Week 3
