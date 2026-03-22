@@ -159,6 +159,28 @@ For each student you can see:
 
 ---
 
+# Week 6 — Plan Your Own Lesson
+
+You have now used Kolibri for a full cycle. The next step is to make it yours.
+
+**With Tapiwa's support, do the following before the end of this visit:**
+
+1. Choose **one topic from your curriculum** for next term
+2. Browse the Kolibri channels and find **2–3 resources** that cover it
+3. Build a lesson using those resources and assign it to your class
+4. Give the lesson a name that matches the curriculum topic — e.g. `Term 2 – Grade 5 Fractions`
+
+> This is not a practice run. This is a real lesson you will use next term.
+
+**Why this matters:**
+Kolibri works best when it supports what you are already teaching. You know your curriculum — Kolibri has the content. Connecting the two is your job as the teacher. Tapiwa can help you find resources, but the choice of topic is yours.
+
+**If you cannot find good resources for your chosen topic:**
+- Try a related topic or a different grade level — the content may be there under a different name
+- Note the gap in the field report — Koen and Justice will follow up on whether additional channels can be added
+
+---
+
 # Summary: What You Can Track Each Week
 
 | Visit | What to check in Kolibri |
@@ -168,4 +190,4 @@ For each student you can see:
 | Week 3 | Reports → Lessons: who has started; show teacher the progress view |
 | Week 4 | Quiz results: aggregate scores; identify who needs support |
 | Week 5 | Full overview: lesson completion + quiz scores + time spent per student |
-| Week 6 | Review with teacher: what worked, what to repeat or drop next cycle |
+| Week 6 | Review results; teacher plans 1 lesson from their own curriculum using Kolibri resources |
