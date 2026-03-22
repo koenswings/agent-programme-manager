@@ -1,22 +1,34 @@
-# TOOLS.md — Programme Manager
+# TOOLS.md — Marco, Programme Manager
+
+## API Credentials
+- `BASE_URL=http://172.18.0.1:8000`
+- `AUTH_TOKEN` — load from `.env` in this directory (gitignored, never committed)
+- `AGENT_NAME=Marco`
+- `AGENT_ID=c1aeb3f8-a258-448f-afcb-f518bdc47bca`
+- `BOARD_ID=3f1be9c8-87e7-4a5d-9d3b-99756c35e3a9`
+- `WORKSPACE_ROOT=/home/node/workspace`
+- `WORKSPACE_PATH=/home/node/workspace/agents/agent-programme-manager`
+- Required tools: `curl`, `jq`
 
 ## Environment
 
-- **Projects root (host):** `/home/pi/idea/`
-- **Projects root (container):** `/home/node/workspace/`
-- **This workspace:** `/home/node/workspace/agents/agent-programme-manager`
-- **Org root:** `/home/node/workspace/` (CONTEXT.md, BACKLOG.md, proposals/, standups/, etc.)
+- **Programme manager repo:** `/home/node/workspace/agents/agent-programme-manager`
+- **Org root:** `/home/node/workspace/` (CONTEXT.md, BACKLOG.md, proposals/, etc.)
+- **Field reports:** `/home/node/workspace/agents/agent-programme-manager/field-reports/`
 
-## Key Paths
+## OpenAPI refresh (run before API-heavy work)
 
-- Own workspace: `./`
-- Org root coordination files: `../../`
-- Proposals: `../../proposals/`
-- Engine repo: `../agent-engine-dev/`
-- Console repo: `../agent-console-dev/`
-- Site repo: `../agent-site-dev/`
+```bash
+mkdir -p api
+curl -fsS "http://172.18.0.1:8000/openapi.json" -o api/openapi.json
+jq -r '
+  .paths | to_entries[] as $p
+  | $p.value | to_entries[]
+  | select((.value.tags // []) | index("agent-lead"))
+  | "\(.key|ascii_upcase)\t\($p.key)\t\(.value.operationId // "-")\t\(.value["x-llm-intent"] // "-")\t\(.value["x-when-to-use"] // [] | join(" | "))\t\(.value["x-routing-policy"] // [] | join(" | "))"
+' api/openapi.json | sort > api/agent-lead-operations.tsv
+```
 
-## Notes
-
-_(Add observations about workflows, field partner contacts, grant database quirks,
-and WhatsApp group management as you discover them.)_
+## API discovery policy
+- Use operations tagged `agent-lead`.
+- Prefer operations whose `x-llm-intent` and `x-when-to-use` match the current objective.
