@@ -5,10 +5,10 @@ _Version 2.1 — March 2026_
 
 | Person | Location | Role |
 |--------|----------|------|
-| Koen | Belgium | Programme co-manager — remote technical support, payment, strategic decisions |
-| Justice | Belgium | Programme co-manager — teaching methodology, escalations, cultural understanding |
+| Koen | Belgium | system development, remote technical support, payment, strategic decisions |
+| Justice | Belgium | teaching methodology, cultural understanding, escalations |
 | Tapiwa | Zimbabwe | Technical lead and trainer — full knowledge of the system; delivers all training and handles on-site technical issues |
-| Misheck | Zimbabwe | Facilitates visits and transport. Also head of Umhambi Orphanage. |
+| Misheck | Zimbabwe | Organises each visit and transport. Handles escalations. Monitors teachers and students during Tapiwa's training sessions. Also head of Umhambi Orphanage. |
 
 **Sites:**
 - Monde Primary School
@@ -17,7 +17,7 @@ _Version 2.1 — March 2026_
 
 **Communication:** All field communication happens in the WhatsApp group **"IDEA: the local team for the Initiative for Digital Education in Africa"**. Koen and Justice follow all field activity from Belgium in this group.
 
-**How escalations work:** Tapiwa resolves technical issues on-site (he is the technical lead with full system knowledge). Issues he cannot fix → Koen provides remote technical support. Teaching or school-relationship issues → Misheck contacts the school contact directly on the ground (he knows the people and the context). If the issue needs teaching methodology input, Misheck consults Justice. Formal or strategic decisions → Koen. Each site has a school contact person known to Misheck.
+**How escalations work:** Tapiwa resolves technical issues on-site (he is the technical lead with full system knowledge). Issues he cannot fix → Koen provides remote technical support. Teaching or school-relationship issues → Misheck contacts the school contact directly on the ground (he knows the people and the context). If the issue needs teaching methodology input, Misheck consults Justice. Escalations are handled jointly by Misheck (on the ground) and Justice (methodology and cultural context). Formal or strategic decisions → Koen. Each site has a school contact person known to Misheck.
 
 **Payment:** $70/week to Misheck and Tapiwa (covering fuel and time), released on receipt of the weekly field report.
 
@@ -29,7 +29,7 @@ By the end of the first 6-week cycle, we expect:
 
 **At every site:**
 1. System is verified running on every visit
-2. A teacher administrator has set up classes and student accounts in Nextcloud (using Presentation 1)
+2. A teacher administrator has set up classes and user accounts in both Nextcloud (using "Registering Users and Organizing Classes") and Kolibri (using "Setting Up Classes in Kolibri") — including accounts for teachers and students in both systems
 3. At least 2 teachers can independently distribute materials to students via Nextcloud
 4. At least 1 teacher has run a structured Kolibri lesson with students
 5. Students can log into both Kolibri and Nextcloud independently
@@ -54,7 +54,7 @@ _Kolibri (Tapiwa checks Reports each visit):_
 - Quiz scores per student (from Week 4)
 - Which resources students have accessed
 
-_Nextcloud (Misheck checks Activity log each visit):_
+_Nextcloud (Tapiwa checks Activity log each visit):_
 - Teacher logins since last visit
 - Whether students have opened the shared class folder
 - Files uploaded to Drop Zone (student homework, from Week 4)
@@ -86,7 +86,7 @@ Verify before anything else:
 If broken: **Tapiwa diagnoses and resolves it** — he has full knowledge of the system. If he cannot fix it on-site, Misheck posts a photo and description in the WhatsApp group. Koen provides remote technical support.
 
 ### Step 2 — Usage Review (10 min)
-**Misheck** opens the Nextcloud Activity log (admin panel → Activity): any teacher or student logins since last visit? Notes the activity or takes a screenshot.
+**Tapiwa** opens the Nextcloud Activity log (admin panel → Activity): any teacher or student logins since last visit? Notes the activity or takes a screenshot.
 **Tapiwa** opens the Kolibri Reports panel: how many sessions since last visit? From Week 3 onwards: check lesson completion per student and quiz scores if a quiz was assigned. Takes a photo.
 **Tapiwa** asks the teacher: "Did you or students use it this week? Any problems?"
 If usage is zero for a second week running: flag in report — Misheck contacts the school contact directly.
@@ -116,12 +116,14 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 ### Week 1 — System Orientation + User Setup
 
 **Kolibri (Presentation: "Setting Up Classes in Kolibri"):**
-- Teacher login and navigation: finding channels, browsing by subject and grade
+- Tapiwa logs in with the admin account (admin / admin911!) and creates teacher accounts for all teachers at the school
+- Teacher logs in with their new account and navigates the interface: finding channels, browsing by subject and grade
 - Teacher creates a class in Kolibri and enrolls the student accounts
 - Teacher browses a loaded channel and builds their first lesson by selecting 2–3 resources
 
 **Nextcloud — Admin Setup (Presentation: "Registering Users and Organizing Classes"):**
 - Access the Accounts dashboard
+- Create teacher accounts first — every teacher at the school needs a Nextcloud account
 - Create a class group (e.g. "Grade 5A")
 - Register 2–3 student accounts with the teacher watching
 - Show the teacher how to add students to a class group
@@ -132,7 +134,7 @@ Do not advance the topic if the teacher is not ready — repeat and note the rea
 
 **Students:** No student session this week — teacher and admin focus only.
 
-**Expected outcome:** Teacher has logged into Kolibri. A class exists in Kolibri with students enrolled and a first lesson built. At least one class group exists in Nextcloud. At least 2–3 student accounts created.
+**Expected outcome:** Teacher accounts created in both Kolibri and Nextcloud. Teacher has logged into Kolibri. A class exists in Kolibri with students enrolled. At least one class group exists in Nextcloud. At least 2–3 student accounts created in Nextcloud.
 
 ---
 
@@ -268,10 +270,10 @@ Repeat the 6-week cycle, going deeper:
 - Shared in the WhatsApp group so the full team sees the picture
 - Justice proposes any curriculum adjustments for the following cycle; Koen approves
 
-### Escalations (led by Misheck on the ground)
+### Escalations (handled by Misheck and Justice)
 - Misheck picks up escalations flagged in the field report — he contacts the school contact directly (he knows the people and the context)
-- Teaching methodology questions → Misheck consults Justice via WhatsApp
-- Technical issues → Misheck reports to Koen; Koen provides remote support
+- Teaching methodology questions → Justice leads, Misheck facilitates on the ground
+- Technical issues → Koen provides remote support; Misheck reports and follows up
 - Formal or strategic decisions → Koen
 - Note: for Umhambi Orphanage, Misheck is the head of the institution and handles all escalations there directly
 
@@ -295,7 +297,7 @@ Stored in `presentations/`. Tapiwa uses these to prepare and deliver sessions.
 
 | Folder | Used in | Purpose |
 |--------|---------|---------|
-| `presentations/nextcloud-user-registration/` | Week 1 | Nextcloud admin: create class groups, register students, mobile setup |
+| `presentations/nextcloud-user-registration/` | Week 1 | Nextcloud admin: create class groups, register teachers and students, mobile setup |
 | `presentations/nextcloud-classroom-use/` | Weeks 2–5 | Nextcloud classroom: sharing materials, file drop, collaborative docs, Talk |
 | `presentations/kolibri-classroom-setup/` | Week 1 | Kolibri: create a class, enroll students, build a first lesson from loaded resources |
 | `presentations/kolibri-lessons-and-quizzes/` | Weeks 2–5 | Kolibri: build and assign lessons, create quizzes, read the Reports dashboard |
@@ -327,7 +329,7 @@ Misheck records the headline numbers in the field report. Tapiwa notes any stude
 
 ### Nextcloud
 
-Misheck checks the Activity log at every visit.
+Tapiwa checks the Activity log at every visit.
 
 **Where:** Nextcloud → top-right menu → Activity (or admin panel → Activity)
 
@@ -338,15 +340,6 @@ Misheck checks the Activity log at every visit.
 | File uploads to Drop Zone | Student homework submission evidence | Week 4 |
 | Shared folder activity | Which class groups are actively using shared content? | Week 2 |
 
-> Note: Nextcloud activity logging requires the Activity app to be enabled. Tapiwa to confirm this is active on first visit. If it is not enabled, Koen to activate remotely.
+> Note: Nextcloud activity logging requires the Activity app to be enabled. Tapiwa to confirm this is active on first visit.
 
----
 
-## Open Questions for Koen and Justice
-
-- [ ] Confirm which Kolibri channels are loaded at each site — and whether they include exercises (needed for quiz creation in Week 4). Tapiwa likely knows; Koen to confirm.
-- [ ] Confirm Nextcloud admin credentials are with Tapiwa (he is technical lead — needed for Week 1)
-- [ ] Confirm whether Nextcloud Talk is enabled and configured on the system (Tapiwa + Koen)
-- [ ] Confirm whether the Nextcloud Activity app is enabled (needed for usage tracking from Week 1)
-- [ ] Justice to brief Tapiwa on the teaching curriculum and share all four presentations before the first visit
-- [ ] Confirm Kolibri Reports is accessible to the teacher account (not just the admin account) — affects how Tapiwa can demonstrate progress tracking in Week 3
