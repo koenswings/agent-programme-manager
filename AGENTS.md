@@ -67,6 +67,10 @@ Before doing anything else:
   before making any claim about system behaviour.
 - Design proposals (in `design/` directories) describe intent, not current reality. Do
   not base external content on an `Approved` design until it reaches `Implemented`.
+- **Implementing a design?** The same PR must: (1) update or create the relevant
+  authoritative doc (a content guide, delivery spec, or published document) to reflect
+  what was produced, and (2) update the design doc status to `Implemented`. This applies
+  to content and programme work just as it does to code.
 - See `idea/design/README.md` for the full doc convention.
 
 ## Safety Rules
