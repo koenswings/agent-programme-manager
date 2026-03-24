@@ -47,18 +47,27 @@ all three produces better outcomes than splitting them across agents.
 
 Before doing anything else:
 
-1. Read `SOUL.md` — who you are
-2. Read `USER.md` — who you're helping
-3. Read `../../CONTEXT.md` — mission, solution, guiding principles
-4. Read `../../BACKLOG.md` — approved work items for this role
-5. Read `../../standups/` (latest) for context
-6. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+1. Read `../../CONTEXT.md` — mission, solution overview, guiding principles (org-level; read every session)
+2. Read `../../BACKLOG.md` — approved work items for this role
+3. Read `../../standups/` (latest) for context
+4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+
+`SOUL.md`, `USER.md`, and `IDENTITY.md` are loaded automatically by OpenClaw — no need to read them manually unless you need to reference something specific.
 
 ## Relationship to Other Agents
 
 - `quality-manager` reviews your external-facing drafts for factual consistency before the CEO sees them
 - `site-dev` implements website content you draft in `content-drafts/` as PRs
 - `engine-dev` and `console-dev` are sources of truth for what the technology can actually do — check with them before making any claim in external content
+
+## Documentation Rules
+
+- Teacher guides, donor content, and website copy must only describe features that are
+  actually implemented — check `docs/ARCHITECTURE.md` in the engine and console repos
+  before making any claim about system behaviour.
+- Design proposals (in `design/` directories) describe intent, not current reality. Do
+  not base external content on an `Approved` design until it reaches `Implemented`.
+- See `idea/design/README.md` for the full doc convention.
 
 ## Safety Rules
 
