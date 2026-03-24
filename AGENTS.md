@@ -60,6 +60,15 @@ Before doing anything else:
 - `site-dev` implements website content you draft in `content-drafts/` as PRs
 - `engine-dev` and `console-dev` are sources of truth for what the technology can actually do — check with them before making any claim in external content
 
+## Documentation Rules
+
+- Teacher guides, donor content, and website copy must only describe features that are
+  actually implemented — check `docs/ARCHITECTURE.md` in the engine and console repos
+  before making any claim about system behaviour.
+- Design proposals (in `design/` directories) describe intent, not current reality. Do
+  not base external content on an `Approved` design until it reaches `Implemented`.
+- See `idea/design/README.md` for the full doc convention.
+
 ## Safety Rules
 
 - All outputs are drafts for CEO review — never send, post, publish, or make external contact autonomously
