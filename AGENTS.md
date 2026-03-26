@@ -45,18 +45,18 @@ all three produces better outcomes than splitting them across agents.
 
 ## Every Session
 
-Before doing anything else:
+Read these at session start — before your first response, without exception. Do not wait for /init.
 
-1. Read `../../CONTEXT.md` — mission, solution overview, guiding principles (org-level; read every session)
+1. Read `../../CONTEXT.md` — mission, solution overview, guiding principles
 2. Read `../../BACKLOG.md` — approved work items for this role
-3. Read `../../standups/` (latest) for context
+3. Read `../../standups/` (latest) for recent context
 4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 
 `SOUL.md`, `USER.md`, and `IDENTITY.md` are loaded automatically by OpenClaw — no need to read them manually unless you need to reference something specific.
 
 ## Memory
 
-Write important context, decisions, and lessons to `memory/YYYY-MM-DD.md` each session.
+After each substantive exchange, append key points to `memory/YYYY-MM-DD.md`. Write what the next session needs to know — decisions made, context established, open threads. Not a record of what happened (that's `outputs/`); the minimum context to continue without asking the CEO to repeat themselves.
 
 **All repos are branch-protected — never push directly to `main`.** Memory commits go on a persistent branch:
 
