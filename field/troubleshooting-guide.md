@@ -5,36 +5,50 @@ You are the first line of support on-site. This guide covers the most common pro
 
 ---
 
-## 1. Server Unreachable — No Apps Load
+## 1. `engine-1.local` Does Not Load
 
-**Symptoms:** Browser cannot open Kolibri, Nextcloud, or Wikipedia. "Site can't be reached" or blank page.
+**Symptoms:** Opening Chromium and going to `engine-1.local` gives "Site can't be reached" or a blank page.
 
-**Check in this order:**
+This means the engine server itself is not reachable. Check in this order:
 
 1. **Is the server powered on?**
    - Look for a power light on the Raspberry Pi / Appdocker device
-   - If off: plug it in and wait 2–3 minutes for it to start up, then try again
+   - If off: plug it in and wait 2–3 minutes, then try again
 
 2. **Is the WiFi network visible?**
-   - On any device, look for the IDEA WiFi network (`appnet` or the local network name)
+   - On any device, look for the `appnet` network in WiFi settings
    - If not visible: the WiFi access point may be off — check its power and lights
 
 3. **Is the device connected to the correct WiFi?**
-   - Open WiFi settings on the device — confirm it shows the IDEA network, not another network
+   - Open WiFi settings — confirm it shows `appnet`, not another network
 
 4. **Try a different device**
-   - If one device cannot connect but another can: the problem is with that device, not the server
-   - Restart the device that cannot connect
+   - If one device cannot reach `engine-1.local` but another can: the problem is with that device, not the server — restart it
 
 5. **Restart the server**
    - Power the Raspberry Pi off and on again (unplug and replug)
-   - Wait 3 minutes, then try again
+   - Wait 3 minutes, then try `engine-1.local` again
 
 **If none of the above works:** Take a photo of the server and any lights. Post in the WhatsApp group with a description. Koen will provide remote support.
 
 ---
 
-## 2. Student Cannot Log In to Kolibri
+## 2. App Not Showing as Running on the Status Page
+
+**Symptoms:** `engine-1.local` loads but Kolibri, Nextcloud, or Wikipedia is not shown as **Running**. Status may show: Undocked, Stopped, Starting, or Error.
+
+| Status shown | What it means | What to do |
+|---|---|---|
+| Not in the list / Undocked | The app disk is not docked | Dock the correct app disk into the Appdocker — the app will start automatically |
+| Starting | App is still loading | Wait 1–2 minutes and refresh the page |
+| Stopped | App is docked but not running | Check if the disk is properly seated; try undocking and re-docking |
+| Error | App started but encountered a problem | Note the error; post in WhatsApp group with a photo; Koen to investigate remotely |
+
+> **The most common cause** of an app not being available is that the disk is not docked. Before assuming a technical fault, check that all app disks are physically inserted.
+
+---
+
+## 3. Student Cannot Log In to Kolibri
 
 **Symptoms:** Student enters username and password but gets an error, or does not know their login.
 
@@ -59,7 +73,7 @@ You are the first line of support on-site. This guide covers the most common pro
 
 ---
 
-## 3. Student Cannot Log In to Nextcloud
+## 4. Student Cannot Log In to Nextcloud
 
 **Symptoms:** Student enters username and password but gets an error.
 
@@ -79,7 +93,7 @@ You are the first line of support on-site. This guide covers the most common pro
 
 ---
 
-## 4. Student Cannot See a Shared Folder in Nextcloud
+## 5. Student Cannot See a Shared Folder in Nextcloud
 
 **Symptoms:** Student logs in to Nextcloud but the shared class folder is not visible.
 
@@ -98,7 +112,7 @@ You are the first line of support on-site. This guide covers the most common pro
 
 ---
 
-## 5. Kolibri Is Slow or Students Cannot Open Videos
+## 6. Kolibri Is Slow or Students Cannot Open Videos
 
 **Symptoms:** Pages load slowly, videos buffer or do not play.
 
@@ -122,7 +136,7 @@ You are the first line of support on-site. This guide covers the most common pro
 
 ---
 
-## 6. Kolibri Reports Show No Data
+## 7. Kolibri Reports Show No Data
 
 **Symptoms:** You open Reports but see no student activity, even though students have been using it.
 
@@ -140,7 +154,7 @@ You are the first line of support on-site. This guide covers the most common pro
 
 ---
 
-## 7. Nextcloud Activity Log Shows Nothing
+## 8. Nextcloud Activity Log Shows Nothing
 
 **Symptoms:** You open the Activity log but it is empty or shows no recent logins.
 

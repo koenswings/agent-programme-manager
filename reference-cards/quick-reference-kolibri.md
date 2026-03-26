@@ -5,9 +5,9 @@ _Keep this card. Use it every week._
 
 ## Log In
 
-1. Open the browser → go to **`[KOLIBRI URL]`**
-2. Click **Sign in**
-3. Enter your **username** and **password**
+1. Open **Chromium** → go to **`engine-1.local`**
+2. Find **Kolibri** in the app list → check it shows **Running** → click it
+3. Click **Sign in** → enter your **username** and **password**
 
 ---
 

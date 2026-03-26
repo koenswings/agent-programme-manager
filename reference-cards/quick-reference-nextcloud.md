@@ -5,8 +5,9 @@ _Keep this card. Use it every week._
 
 ## Log In
 
-1. Open the browser → go to **`[NEXTCLOUD URL]`**
-2. Enter your **username** and **password**
+1. Open **Chromium** → go to **`engine-1.local`**
+2. Find **Nextcloud** in the app list → check it shows **Running** → click it
+3. Enter your **username** and **password**
 
 ---
 

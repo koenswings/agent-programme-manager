@@ -23,13 +23,17 @@ Wikipedia is written and checked by thousands of people around the world. It is 
 
 # Accessing Wikipedia on the IDEA System
 
-Wikipedia is available on the same network as Kolibri and Nextcloud.
+Wikipedia is available on the same network as Kolibri and Nextcloud. Like all apps on the IDEA system, it is accessed through the app status page.
 
-1. Open the browser on any device connected to the IDEA WiFi
-2. Go to: **`[WIKIPEDIA URL — Tapiwa to confirm per site]`**
-3. The Wikipedia home page will open — no login required
+1. Open **Chromium** on any device connected to the IDEA WiFi
+2. Go to: **`engine-1.local`**
+3. You will see a list of all apps available on the network and their current status
+4. Find **Wikipedia** in the list — it must show **Running**
+5. Click the **Wikipedia** link to open it
 
 > Wikipedia is read-only — no accounts, no passwords. Anyone on the network can read it.
+
+> **If Wikipedia shows as Stopped or is not in the list:** The app disk may not be docked. Tapiwa needs to dock the Wikipedia disk to make it available.
 
 ---
 
@@ -86,12 +90,13 @@ Wikipedia works best as a **supplement** to what you are already teaching — no
 
 ---
 
-# If Wikipedia Does Not Load
+# If Wikipedia Does Not Open
 
-Wikipedia requires the server to be running on the IDEA system.
-
-1. First check that **Kolibri and Nextcloud are also loading** — if none of them load, the server is down (see the Troubleshooting Guide)
-2. If Kolibri and Nextcloud load but Wikipedia does not, the Wikipedia app disk may not be docked — Tapiwa to check
+1. Go to **`engine-1.local`** and check the status next to Wikipedia
+   - **Not in the list / Undocked:** the Wikipedia disk is not docked — ask Tapiwa to dock it
+   - **Starting:** wait one minute and try again
+   - **Stopped or Error:** ask Tapiwa — the app may need to be restarted
+2. If **`engine-1.local` itself does not load**, the server is down — see the Troubleshooting Guide
 3. If uncertain, note it in the field report for Koen to investigate remotely
 
 ---

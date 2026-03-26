@@ -5,8 +5,9 @@ _Keep this card. Use it every week._
 
 ## Access Wikipedia
 
-1. Open the browser → go to **`[WIKIPEDIA URL]`**
-2. No login needed — open to everyone on the network
+1. Open **Chromium** → go to **`engine-1.local`**
+2. Find **Wikipedia** in the app list → check it shows **Running** → click it
+3. No login needed — open to everyone on the network
 
 ---
 
