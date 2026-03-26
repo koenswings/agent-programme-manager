@@ -131,8 +131,9 @@ This means the engine server itself is not reachable. Check in this order:
    - Note the issue in the field report
 
 4. **Restart Kolibri**
-   - This is done by restarting the server (see Section 1, Step 5)
-   - Wait 3 minutes after restart before trying again
+   - Undock the Kolibri disk from the Appdocker, wait a few seconds, then re-dock it
+   - Wait 2–3 minutes for Kolibri to start up — check `engine-1.local` for the status
+   - If it still does not come back up after re-docking, then restart the full server (Section 1, Step 5)
 
 ---
 
