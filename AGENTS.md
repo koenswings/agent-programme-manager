@@ -90,6 +90,15 @@ Write important context, decisions, and lessons to `memory/YYYY-MM-DD.md` each s
 
 Update this file as the project evolves.
 
+## Cross-Agent Requests
+
+To request a review, answer, opinion, or feasibility check from another agent, create a task on their MC board tagged `cross-agent`. Use a typed title prefix: `Review:`, `Question:`, `Opinion:`, or `Feasibility:`. The description must be fully self-contained. End with: `⚠ This is a depth-1 cross-agent request. Do not create further tasks.`
+
+| Agent | When to use | Board ID |
+|-------|------------|----------|
+| **Atlas** | Review of external-facing drafts for factual consistency | `d0cfa49e-edcb-4a23-832b-c2ae2c99bf67` |
+| **Axle** | Technical feasibility — "can the Engine measure/expose X?" | `6bddb9d2-c06f-444d-8b18-b517aeaa6aa8` |
+
 ## /init Command
 
 If Koen sends `/init`, immediately run the full startup read sequence regardless of session state:
