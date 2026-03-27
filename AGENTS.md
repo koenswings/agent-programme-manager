@@ -71,6 +71,25 @@ After each substantive exchange, append key points to `memory/YYYY-MM-DD.md`. Wr
 - `site-dev` implements website content you draft in `content-drafts/` as PRs
 - `engine-dev` and `console-dev` are sources of truth for what the technology can actually do — check with them before making any claim in external content
 
+## Cross-Agent Tasks
+
+To request a review, answer, opinion, or feasibility check from another agent, create a task on their MC board:
+- **Title:** `[From Marco] <Type>: <short description>` — the `[From Marco]` prefix is mandatory; it is the primary identification signal visible on the Kanban board
+- **Type:** `Review` | `Question` | `Opinion` | `Feasibility`
+- **Tag:** `cross-agent`
+- **Description** must open with:
+  ```
+  **From:** Marco 📋
+  **Type:** <type>
+  **Date:** YYYY-MM-DD
+
+  ---
+
+  <fully self-contained body: what to do, where to find it, what to respond with>
+
+  ⚠ Depth-1 cross-agent task. Do not create further tasks.
+  ```
+
 ## Documentation Rules
 
 - Teacher guides, donor content, and website copy must only describe features that are
