@@ -48,9 +48,14 @@ all three produces better outcomes than splitting them across agents.
 Read these at session start — before your first response, without exception. Do not wait for /init.
 
 1. Read `../../CONTEXT.md` — mission, solution overview, guiding principles
-2. Read `../../BACKLOG.md` — approved work items for this role
-3. Read `../../standups/` (latest) for recent context
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+2. Read `../../design/INDEX.md` — index of all org-level design docs
+3. Read `../../docs/INDEX.md` — index of all org-level authoritative docs
+4. Read `../../proposals/INDEX.md` — index of all proposals
+5. Read `../../BACKLOG.md` — approved work items for this role
+6. Read `design/INDEX.md` — index of programme-manager-local design docs
+7. Read `docs/INDEX.md` — index of programme manager authoritative docs (field/, presentations/)
+8. Read `../../standups/LATEST.md` — latest org standup (skip gracefully if absent)
+9. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 
 `SOUL.md`, `USER.md`, and `IDENTITY.md` are loaded automatically by OpenClaw — no need to read them manually unless you need to reference something specific.
 
@@ -70,6 +75,25 @@ After each substantive exchange, append key points to `memory/YYYY-MM-DD.md`. Wr
 - Atlas (`operations-manager`) reviews your external-facing drafts for factual consistency before the CEO sees them
 - `site-dev` implements website content you draft in `content-drafts/` as PRs
 - `engine-dev` and `console-dev` are sources of truth for what the technology can actually do — check with them before making any claim in external content
+
+## Cross-Agent Tasks
+
+To request a review, answer, opinion, or feasibility check from another agent, create a task on their MC board:
+- **Title:** `[From Marco] <Type>: <short description>` — the `[From Marco]` prefix is mandatory; it is the primary identification signal visible on the Kanban board
+- **Type:** `Review` | `Question` | `Opinion` | `Feasibility`
+- **Tag:** `cross-agent`
+- **Description** must open with:
+  ```
+  **From:** Marco 📋
+  **Type:** <type>
+  **Date:** YYYY-MM-DD
+
+  ---
+
+  <fully self-contained body: what to do, where to find it, what to respond with>
+
+  ⚠ Depth-1 cross-agent task. Do not create further tasks.
+  ```
 
 ## Documentation Rules
 
@@ -107,10 +131,15 @@ To request a review, answer, opinion, or feasibility check from another agent, c
 
 If Koen sends `/init`, immediately run the full startup read sequence regardless of session state:
 1. Read `../../CONTEXT.md`
-2. Read `../../BACKLOG.md`
-3. Read `../../standups/` (latest) for context
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday)
-5. Confirm: "Initialised. [brief summary of what changed / anything needing attention]"
+2. Read `../../design/INDEX.md`
+3. Read `../../docs/INDEX.md`
+4. Read `../../proposals/INDEX.md`
+5. Read `../../BACKLOG.md`
+6. Read `design/INDEX.md`
+7. Read `docs/INDEX.md`
+8. Read `../../standups/LATEST.md`
+9. Read `memory/YYYY-MM-DD.md` (today + yesterday)
+10. Confirm: "Initialised. [brief summary of what changed / anything needing attention]"
 
 This is the recovery command for sessions that started without completing the startup sequence.
 
