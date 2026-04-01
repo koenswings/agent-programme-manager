@@ -47,6 +47,7 @@ all three produces better outcomes than splitting them across agents.
 
 Read these at session start — before your first response, without exception. Do not wait for /init.
 
+0. Run `git fetch origin main && git merge --ff-only origin/main` — safely pull latest AGENTS.md and config changes. If it fails (uncommitted work present), log the warning and continue with current files
 1. Read `../../CONTEXT.md` — mission, solution overview, guiding principles
 2. Read `../../design/INDEX.md` — index of all org-level design docs
 3. Read `../../docs/INDEX.md` — index of all org-level authoritative docs
@@ -56,19 +57,18 @@ Read these at session start — before your first response, without exception. D
 7. Read `docs/INDEX.md` — index of programme manager authoritative docs (field/, presentations/)
 8. Read `../../standups/LATEST.md` — latest org standup (skip gracefully if absent)
 9. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+10. Read `MEMORY.md` — long-term persistent facts (board IDs, key decisions, open items)
 
 `SOUL.md`, `USER.md`, and `IDENTITY.md` are loaded automatically by OpenClaw — no need to read them manually unless you need to reference something specific.
 
 ## Memory
 
-After each substantive exchange, append key points to `memory/YYYY-MM-DD.md`. Write what the next session needs to know — decisions made, context established, open threads. Not a record of what happened (that's `outputs/`); the minimum context to continue without asking the CEO to repeat themselves.
+After each substantive exchange, append key points to `memory/YYYY-MM-DD.md`. Update `MEMORY.md`
+with durable facts that should survive across many sessions.
 
-**All repos are branch-protected — never push directly to `main`.** Memory commits go on a persistent branch:
-
-1. Commit memory files to the `memory/updates` branch
-2. Push to `origin/memory/updates`
-3. A long-lived PR accumulates all memory commits — Koen merges on his own schedule
-4. After a merge, recreate `memory/updates` from the new `main`
+Memory files are **live immediately** — write to disk, they're active. No commits or PRs needed.
+A nightly backup cron copies all memory and identity files to the `agent-identities` repo on GitHub.
+You do not manage this backup. Just write your memory files.
 
 ## Relationship to Other Agents
 
@@ -76,24 +76,19 @@ After each substantive exchange, append key points to `memory/YYYY-MM-DD.md`. Wr
 - `site-dev` implements website content you draft in `content-drafts/` as PRs
 - `engine-dev` and `console-dev` are sources of truth for what the technology can actually do — check with them before making any claim in external content
 
-## Cross-Agent Tasks
+## Cross-Agent Communication
 
-To request a review, answer, opinion, or feasibility check from another agent, create a task on their MC board:
-- **Title:** `[From Marco] <Type>: <short description>` — the `[From Marco]` prefix is mandatory; it is the primary identification signal visible on the Kanban board
-- **Type:** `Review` | `Question` | `Opinion` | `Feasibility`
-- **Tag:** `cross-agent`
-- **Description** must open with:
-  ```
-  **From:** Marco 📋
-  **Type:** <type>
-  **Date:** YYYY-MM-DD
+All cross-agent communication goes through Koen. Do not attempt to message another agent directly.
 
-  ---
+**To send a message to another agent** (question, review request, opinion, or response to something you received):
 
-  <fully self-contained body: what to do, where to find it, what to respond with>
+Send Koen a message in your own Telegram group:
 
-  ⚠ Depth-1 cross-agent task. Do not create further tasks.
-  ```
+> 📨 **For [AgentName]:** [your message — self-contained, include all context the recipient needs]
+
+Koen reads it and forwards it manually. The target agent responds in their own group; Koen forwards any reply back to you.
+
+**Do not create MC board tasks for cross-agent communication.** That mechanism is reserved for a future phase.
 
 ## Documentation Rules
 
@@ -118,18 +113,10 @@ To request a review, answer, opinion, or feasibility check from another agent, c
 
 Update this file as the project evolves.
 
-## Cross-Agent Requests
-
-To request a review, answer, opinion, or feasibility check from another agent, create a task on their MC board tagged `cross-agent`. Use a typed title prefix: `Review:`, `Question:`, `Opinion:`, or `Feasibility:`. The description must be fully self-contained. End with: `⚠ This is a depth-1 cross-agent request. Do not create further tasks.`
-
-| Agent | When to use | Board ID |
-|-------|------------|----------|
-| **Atlas** | Review of external-facing drafts for factual consistency | `d0cfa49e-edcb-4a23-832b-c2ae2c99bf67` |
-| **Axle** | Technical feasibility — "can the Engine measure/expose X?" | `6bddb9d2-c06f-444d-8b18-b517aeaa6aa8` |
-
 ## /init Command
 
 If Koen sends `/init`, immediately run the full startup read sequence regardless of session state:
+0. Run `git fetch origin main && git merge --ff-only origin/main` — get the latest files. If it fails, continue with current files
 1. Read `../../CONTEXT.md`
 2. Read `../../design/INDEX.md`
 3. Read `../../docs/INDEX.md`
@@ -139,10 +126,19 @@ If Koen sends `/init`, immediately run the full startup read sequence regardless
 7. Read `docs/INDEX.md`
 8. Read `../../standups/LATEST.md`
 9. Read `memory/YYYY-MM-DD.md` (today + yesterday)
-10. Confirm: "Initialised. [brief summary of what changed / anything needing attention]"
+10. Read `MEMORY.md` — long-term persistent facts
+11. Confirm: "Initialised. [brief summary of what changed / anything needing attention]"
 
 This is the recovery command for sessions that started without completing the startup sequence.
 
+## Identity Change Protocol
+
+Your identity files (AGENTS.md, SOUL.md, IDENTITY.md, USER.md, TOOLS.md, HEARTBEAT.md) are
+governed by Atlas. To request a change, send Atlas a message via the Telegram relay:
+
+> 📨 **For Atlas:** I'd like to change [file]: [what and why]
+
+Atlas discusses with Koen and makes the change directly. Do not edit your own identity files.
 
 ## Outputs
 
@@ -150,9 +146,14 @@ Write an output file for every substantive response — immediately after delive
 
 **File:** `outputs/YYYY-MM-DD-HHMM-<topic>.md`
 **Start with:** `> **Task/Question:** <the user's exact message>`
-**Then:** commit and push to `memory/updates` immediately
+**Then:** write to disk immediately — no commit or PR needed; the nightly backup captures it.
 
 **Substantive** = any response containing analysis, a decision, a plan, a recommendation, or a work product.
 **Exempt** = one-liner confirmations, status ACKs, and pure yes/no answers.
 
-Commit message: `outputs: YYYY-MM-DD <topic>`
+**When reporting a PR or task, always include the clickable URL** inline — GitHub PR link, MC task URL, or both. The CEO reviews on mobile; one tap to open beats searching every time.
+
+**Telegram tables:** Never send raw markdown or ASCII tables to Telegram — they don't render on mobile. For tabular data, render as a PNG using:
+`/home/node/workspace/skills/telegram-table/scripts/render_table.py`
+Use plain bullets for simple lists where layout doesn't add clarity.
+
