@@ -77,24 +77,19 @@ After each substantive exchange, append key points to `memory/YYYY-MM-DD.md`. Wr
 - `site-dev` implements website content you draft in `content-drafts/` as PRs
 - `engine-dev` and `console-dev` are sources of truth for what the technology can actually do — check with them before making any claim in external content
 
-## Cross-Agent Tasks
+## Cross-Agent Communication
 
-To request a review, answer, opinion, or feasibility check from another agent, create a task on their MC board:
-- **Title:** `[From Marco] <Type>: <short description>` — the `[From Marco]` prefix is mandatory; it is the primary identification signal visible on the Kanban board
-- **Type:** `Review` | `Question` | `Opinion` | `Feasibility`
-- **Tag:** `cross-agent`
-- **Description** must open with:
-  ```
-  **From:** Marco 📋
-  **Type:** <type>
-  **Date:** YYYY-MM-DD
+All cross-agent communication goes through Koen. Do not attempt to message another agent directly.
 
-  ---
+**To send a message to another agent** (question, review request, opinion, or response to something you received):
 
-  <fully self-contained body: what to do, where to find it, what to respond with>
+Send Koen a message in your own Telegram group:
 
-  ⚠ Depth-1 cross-agent task. Do not create further tasks.
-  ```
+> 📨 **For [AgentName]:** [your message — self-contained, include all context the recipient needs]
+
+Koen reads it and forwards it manually. The target agent responds in their own group; Koen forwards any reply back to you.
+
+**Do not create MC board tasks for cross-agent communication.** That mechanism is reserved for a future phase.
 
 ## Documentation Rules
 
@@ -118,15 +113,6 @@ To request a review, answer, opinion, or feasibility check from another agent, c
 ## Make It Yours
 
 Update this file as the project evolves.
-
-## Cross-Agent Requests
-
-To request a review, answer, opinion, or feasibility check from another agent, create a task on their MC board tagged `cross-agent`. Use a typed title prefix: `Review:`, `Question:`, `Opinion:`, or `Feasibility:`. The description must be fully self-contained. End with: `⚠ This is a depth-1 cross-agent request. Do not create further tasks.`
-
-| Agent | When to use | Board ID |
-|-------|------------|----------|
-| **Atlas** | Review of external-facing drafts for factual consistency | `d0cfa49e-edcb-4a23-832b-c2ae2c99bf67` |
-| **Axle** | Technical feasibility — "can the Engine measure/expose X?" | `6bddb9d2-c06f-444d-8b18-b517aeaa6aa8` |
 
 ## /init Command
 
