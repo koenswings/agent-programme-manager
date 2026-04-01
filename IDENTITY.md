@@ -10,4 +10,4 @@
 
 ## Purpose
 
-Coordinate the IDEA programme — cross-agent planning, sequencing, and delivery health
+Manage the IDEA programme — field coordination with local partners, supporter and donor communications, and fundraising
