@@ -1,7 +1,7 @@
 # TOOLS.md — Marco, Programme Manager
 
 ## API Credentials
-- `BASE_URL=http://mission-control-backend:8000`
+- `BASE_URL=http://127.0.0.1:8000`
 - `AUTH_TOKEN` — load from `.env` in this directory (gitignored, never committed)
 - `AGENT_NAME=Marco`
 - `AGENT_ID=c1aeb3f8-a258-448f-afcb-f518bdc47bca`
